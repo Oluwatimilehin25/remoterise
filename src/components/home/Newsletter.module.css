@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+}
+
+.iconWrapper {
+    width: 5rem;
+    height: 5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto var(--space-6);
+}
+
+.title {
+    font-size: clamp(2rem, 4vw, 2.5rem);
+    margin-bottom: var(--space-4);
+    color: inherit;
+}
+
+.subtitle {
+    font-size: 1.125rem;
+    opacity: 0.9;
+    margin-bottom: var(--space-12);
+    color: inherit;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.form {
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+
+.inputGroup {
+    display: flex;
+    gap: var(--space-4);
+    background: hsl(var(--surface-color));
+    padding: var(--space-2);
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-xl);
+}
+
+.input,
+.select {
+    border: none;
+    background: transparent;
+    padding: var(--space-3) var(--space-4);
+    font-size: 1rem;
+    color: hsl(var(--text-primary));
+    font-family: inherit;
+}
+
+.input:focus,
+.select:focus {
+    outline: none;
+}
+
+.input {
+    flex: 1;
+}
+
+.select {
+    border-left: 1px solid hsl(var(--border));
+    color: hsl(var(--text-secondary));
+    cursor: pointer;
+}
+
+.subscribeBtn {
+    background-color: hsl(var(--accent));
+    color: hsl(var(--accent-foreground));
+    align-self: center;
+    padding-left: var(--space-8);
+    padding-right: var(--space-8);
+}
+
+.subscribeBtn:hover {
+    background-color: hsl(var(--accent-hover));
+}
+
+@media (max-width: 640px) {
+    .inputGroup {
+        flex-direction: column;
+        border-radius: var(--radius-xl);
+        padding: var(--space-4);
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .input,
+    .select {
+        background: hsl(var(--surface-color));
+        border-radius: var(--radius-md);
+    }
+
+    .select {
+        border-left: none;
+    }
+}

@@ -141,7 +141,7 @@ export default function JobListings() {
                             </div>
 
                             <div className={styles.actions}>
-                                <Link href={`#apply-${job.id}`} className={`btn btn-primary ${styles.applyBtn}`}>
+                                <Link href={`/apply/${job.id}`} className={`btn btn-primary ${styles.applyBtn}`}>
                                     Apply Now
                                 </Link>
                             </div>
